@@ -93,7 +93,7 @@ public class BusquedaPacienteVista extends javax.swing.JFrame {
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 190, 20));
 
-        jLabel7.setText("Búsqueda de citas médicas");
+        jLabel7.setText("Búsqueda de cita médica");
         jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 190, 25));
 

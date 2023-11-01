@@ -113,7 +113,7 @@ public class RegistroPacienteVista extends javax.swing.JFrame {
         jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 190, 20));
 
         jLabel12.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel12.setText("Historial de citas médicas");
+        jLabel12.setText("Búsqueda de cita médica");
         jLabel12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 190, 25));
 
