@@ -144,7 +144,7 @@ public class BusquedaPacienteVista extends javax.swing.JFrame {
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         jLabel2.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel2.setText("Busca al paciente ingresando su nombre o su DNI.");
+        jLabel2.setText("Busque al paciente ingresando su nombre o su DNI.");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
 
         jTextField1.setForeground(new java.awt.Color(18, 23, 33));
