@@ -90,6 +90,11 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(18, 23, 33));
         jLabel11.setText("Registro de paciente");
         jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 190, 25));
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
@@ -98,6 +103,11 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(18, 23, 33));
         jLabel12.setText("Búsqueda de paciente");
         jLabel12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 190, 25));
 
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
@@ -115,6 +125,11 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
         jLabel14.setForeground(new java.awt.Color(18, 23, 33));
         jLabel14.setText("Búsqueda de cita médica");
         jLabel14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel14MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 190, 25));
 
         jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
@@ -123,6 +138,11 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(18, 23, 33));
         jLabel15.setText("Registro de médico");
         jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel15MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 190, 25));
 
         jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
@@ -131,6 +151,11 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
         jLabel16.setForeground(new java.awt.Color(18, 23, 33));
         jLabel16.setText("Registro de historia médica");
         jLabel16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel16MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 190, 25));
 
         jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
@@ -139,6 +164,11 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(18, 23, 33));
         jLabel17.setText("Búsqueda de historia médica");
         jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel17MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 190, 25));
 
         jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
@@ -246,6 +276,60 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        // Cierra la ventana actual
+        dispose();
+
+        // Abre la nueva ventana Registro de Paciente
+        RegistroPacienteVista RP = new RegistroPacienteVista();
+        RP.setVisible(true);
+    }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+        // Cierra la ventana actual
+        dispose();
+
+        // Abre la nueva ventana Búsqueda de Paciente
+        BusquedaPacienteVista BPV = new BusquedaPacienteVista();
+        BPV.setVisible(true);
+    }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        // Cierra la ventana actual
+        dispose();
+
+        // Abre la nueva ventana Busqueda de Cita Medica
+        BusquedaCitaMedicaVista BCM = new BusquedaCitaMedicaVista();
+        BCM.setVisible(true);
+    }//GEN-LAST:event_jLabel14MouseClicked
+
+    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
+        // Cierra la ventana actual
+        dispose();
+
+        // Abre la nueva ventana Registro de Medico
+        RegistroMedicoVista RM = new RegistroMedicoVista();
+        RM.setVisible(true);
+    }//GEN-LAST:event_jLabel15MouseClicked
+
+    private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
+        // Cierra la ventana actual
+        dispose();
+
+        // Abre la nueva ventana Registro de Historia Medica
+        RegistroHistoriaMedicaVista RHM = new RegistroHistoriaMedicaVista();
+        RHM.setVisible(true);
+    }//GEN-LAST:event_jLabel16MouseClicked
+
+    private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
+        // Cierra la ventana actual
+        dispose();
+
+        // Abre la nueva ventana Busqueda de Historia Medica
+        BusquedaHistoriaMedicaVista BHM = new BusquedaHistoriaMedicaVista();
+        BHM.setVisible(true);
+    }//GEN-LAST:event_jLabel17MouseClicked
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
