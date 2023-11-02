@@ -1,5 +1,6 @@
 package vista;
 
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.Icon;
@@ -14,6 +15,8 @@ public class BusquedaPacienteVista extends javax.swing.JFrame {
         setIconImage(getIconImage());
 
         SetImageLabel(logo, "src/img/logo.png");
+        
+        tblPaciente.requestFocusInWindow();
     }
 
     // Icono del JFrame
@@ -51,10 +54,10 @@ public class BusquedaPacienteVista extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtBuscar = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblPaciente = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Búsqueda de paciente");
@@ -177,8 +180,17 @@ public class BusquedaPacienteVista extends javax.swing.JFrame {
         jLabel2.setText("Busque al paciente ingresando su nombre o su DNI.");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
 
-        jTextField1.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 310, 30));
+        txtBuscar.setForeground(new java.awt.Color(102, 102, 102));
+        txtBuscar.setText("Nombre o DNI del paciente...");
+        txtBuscar.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtBuscarFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtBuscarFocusLost(evt);
+            }
+        });
+        jPanel2.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 310, 30));
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(18, 23, 33));
@@ -186,8 +198,8 @@ public class BusquedaPacienteVista extends javax.swing.JFrame {
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 100, 30));
 
-        jTable1.setForeground(new java.awt.Color(18, 23, 33));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblPaciente.setForeground(new java.awt.Color(18, 23, 33));
+        tblPaciente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -198,7 +210,7 @@ public class BusquedaPacienteVista extends javax.swing.JFrame {
                 "Paciente", "DNI", "Edad", "Género", "Teléfono"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblPaciente);
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 420, 320));
 
@@ -271,6 +283,20 @@ public class BusquedaPacienteVista extends javax.swing.JFrame {
         BusquedaHistoriaMedicaVista BHM = new BusquedaHistoriaMedicaVista();
         BHM.setVisible(true);
     }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void txtBuscarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtBuscarFocusGained
+        if (txtBuscar.getText().equals("Nombre o DNI del paciente...")) {
+            txtBuscar.setText("");
+            txtBuscar.setForeground(new Color(18, 23, 33));
+        }
+    }//GEN-LAST:event_txtBuscarFocusGained
+
+    private void txtBuscarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtBuscarFocusLost
+        if (txtBuscar.getText().equals("")) {
+            txtBuscar.setText("Nombre o DNI del paciente...");
+            txtBuscar.setForeground(new Color(102, 102, 102));
+        }
+    }//GEN-LAST:event_txtBuscarFocusLost
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -345,8 +371,8 @@ public class BusquedaPacienteVista extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel logo;
+    private javax.swing.JTable tblPaciente;
+    private javax.swing.JTextField txtBuscar;
     // End of variables declaration//GEN-END:variables
 }
