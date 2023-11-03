@@ -15,7 +15,7 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         setIconImage(getIconImage());
 
         SetImageLabel(logo, "src/img/logo.png");
-        
+
         tblHistoriaMedica.requestFocusInWindow();
     }
 
@@ -296,7 +296,7 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
     }//GEN-LAST:event_txtBuscarFocusGained
 
     private void txtBuscarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtBuscarFocusLost
-       if (txtBuscar.getText().equals("")) {
+        if (txtBuscar.getText().equals("")) {
             txtBuscar.setText("Nombre del paciente...");
             txtBuscar.setForeground(new Color(102, 102, 102));
         }

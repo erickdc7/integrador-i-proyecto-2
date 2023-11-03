@@ -358,21 +358,21 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
     }//GEN-LAST:event_txtFechaFocusGained
 
     private void txtFechaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFechaFocusLost
-       if (txtFecha.getText().equals("")) {
+        if (txtFecha.getText().equals("")) {
             txtFecha.setText("Formato: MM/dd/aaaa");
             txtFecha.setForeground(new Color(102, 102, 102));
         }
     }//GEN-LAST:event_txtFechaFocusLost
 
     private void txtHoraFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtHoraFocusGained
-       if (txtHora.getText().equals("Formato: hh:mm")) {
+        if (txtHora.getText().equals("Formato: hh:mm")) {
             txtHora.setText("");
             txtHora.setForeground(new Color(18, 23, 33));
         }
     }//GEN-LAST:event_txtHoraFocusGained
 
     private void txtHoraFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtHoraFocusLost
-       if (txtHora.getText().equals("")) {
+        if (txtHora.getText().equals("")) {
             txtHora.setText("Formato: hh:mm");
             txtHora.setForeground(new Color(102, 102, 102));
         }

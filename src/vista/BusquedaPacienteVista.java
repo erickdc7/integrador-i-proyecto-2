@@ -15,7 +15,7 @@ public class BusquedaPacienteVista extends javax.swing.JFrame {
         setIconImage(getIconImage());
 
         SetImageLabel(logo, "src/img/logo.png");
-        
+
         tblPaciente.requestFocusInWindow();
     }
 

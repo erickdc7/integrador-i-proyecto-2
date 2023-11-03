@@ -15,7 +15,7 @@ public class BusquedaCitaMedicaVista extends javax.swing.JFrame {
         setIconImage(getIconImage());
 
         SetImageLabel(logo, "src/img/logo.png");
-        
+
         tblCitaMedica.requestFocusInWindow();
     }
 
@@ -289,14 +289,14 @@ public class BusquedaCitaMedicaVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void txtBuscarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtBuscarFocusGained
-       if (txtBuscar.getText().equals("DNI del paciente...")) {
+        if (txtBuscar.getText().equals("DNI del paciente...")) {
             txtBuscar.setText("");
             txtBuscar.setForeground(new Color(18, 23, 33));
         }
     }//GEN-LAST:event_txtBuscarFocusGained
 
     private void txtBuscarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtBuscarFocusLost
-       if (txtBuscar.getText().equals("")) {
+        if (txtBuscar.getText().equals("")) {
             txtBuscar.setText("DNI del paciente...");
             txtBuscar.setForeground(new Color(102, 102, 102));
         }
