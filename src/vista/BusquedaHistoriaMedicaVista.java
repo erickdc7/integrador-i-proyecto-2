@@ -1,5 +1,6 @@
 package vista;
 
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.Icon;
@@ -14,6 +15,8 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         setIconImage(getIconImage());
 
         SetImageLabel(logo, "src/img/logo.png");
+        
+        tblHistoriaMedica.requestFocusInWindow();
     }
 
     // Icono del JFrame
@@ -33,28 +36,28 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
         jLabel5 = new javax.swing.JLabel();
-        jSeparator3 = new javax.swing.JSeparator();
         jLabel6 = new javax.swing.JLabel();
-        jSeparator4 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
-        jSeparator5 = new javax.swing.JSeparator();
         jLabel8 = new javax.swing.JLabel();
-        jSeparator6 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
-        jSeparator7 = new javax.swing.JSeparator();
         jLabel10 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        jSeparator7 = new javax.swing.JSeparator();
         jSeparator8 = new javax.swing.JSeparator();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtBuscar = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblHistoriaMedica = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Búsqueda de historia médica");
@@ -73,9 +76,6 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         jLabel4.setText("Centro Médico Uribe");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 190, -1));
 
-        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 190, 20));
-
         jLabel3.setForeground(new java.awt.Color(18, 23, 33));
         jLabel3.setText("Registro de paciente");
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -85,9 +85,6 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 190, 25));
-
-        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 190, 20));
 
         jLabel5.setForeground(new java.awt.Color(18, 23, 33));
         jLabel5.setText("Búsqueda de paciente");
@@ -99,9 +96,6 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         });
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 190, 25));
 
-        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 190, 20));
-
         jLabel6.setForeground(new java.awt.Color(18, 23, 33));
         jLabel6.setText("Registro de cita médica");
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -111,9 +105,6 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 190, 25));
-
-        jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 190, 20));
 
         jLabel7.setForeground(new java.awt.Color(18, 23, 33));
         jLabel7.setText("Búsqueda de cita médica");
@@ -125,9 +116,6 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         });
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 190, 25));
 
-        jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 190, 20));
-
         jLabel8.setForeground(new java.awt.Color(18, 23, 33));
         jLabel8.setText("Registro de médico");
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -137,9 +125,6 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 190, 25));
-
-        jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 190, 20));
 
         jLabel9.setForeground(new java.awt.Color(18, 23, 33));
         jLabel9.setText("Registro de historia médica");
@@ -151,17 +136,35 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         });
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 190, 25));
 
-        jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 190, 20));
-
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(18, 23, 33));
         jLabel10.setText("Búsqueda de historia médica");
         jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 170, 25));
 
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 190, 5));
+
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 190, 5));
+
+        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 190, 5));
+
+        jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 190, 5));
+
+        jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 190, 5));
+
+        jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 190, 5));
+
+        jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 190, 5));
+
         jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 190, 20));
+        jPanel2.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 190, 5));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 500));
 
@@ -177,8 +180,17 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         jLabel2.setText("Busque la historia médica ingresando el nombre del paciente.");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
 
-        jTextField1.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 310, 30));
+        txtBuscar.setForeground(new java.awt.Color(102, 102, 102));
+        txtBuscar.setText("Nombre del paciente...");
+        txtBuscar.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtBuscarFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtBuscarFocusLost(evt);
+            }
+        });
+        jPanel3.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 310, 30));
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(18, 23, 33));
@@ -186,19 +198,19 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 100, 30));
 
-        jTable1.setForeground(new java.awt.Color(18, 23, 33));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblHistoriaMedica.setForeground(new java.awt.Color(18, 23, 33));
+        tblHistoriaMedica.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Paciente", "Fecha", "Diagnóstico", "Tratamiento"
+                "Nombres", "Apellidos", "Fecha", "Diagnóstico", "Tratamiento"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblHistoriaMedica);
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 420, 320));
 
@@ -276,6 +288,20 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         RHM.setVisible(true);
     }//GEN-LAST:event_jLabel9MouseClicked
 
+    private void txtBuscarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtBuscarFocusGained
+        if (txtBuscar.getText().equals("Nombre del paciente...")) {
+            txtBuscar.setText("");
+            txtBuscar.setForeground(new Color(18, 23, 33));
+        }
+    }//GEN-LAST:event_txtBuscarFocusGained
+
+    private void txtBuscarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtBuscarFocusLost
+       if (txtBuscar.getText().equals("")) {
+            txtBuscar.setText("Nombre del paciente...");
+            txtBuscar.setForeground(new Color(102, 102, 102));
+        }
+    }//GEN-LAST:event_txtBuscarFocusLost
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -349,8 +375,8 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel logo;
+    private javax.swing.JTable tblHistoriaMedica;
+    private javax.swing.JTextField txtBuscar;
     // End of variables declaration//GEN-END:variables
 }
