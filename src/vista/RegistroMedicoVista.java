@@ -245,7 +245,7 @@ public class RegistroMedicoVista extends javax.swing.JFrame {
         jPanel3.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 210, 30));
 
         jComboBox2.setForeground(new java.awt.Color(18, 23, 33));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cardiología", "Dermatología", "Neurología", "Pediatría", "Psiquiatría", "Oftalmología", "Ginecología", "Obstetricia", "Ortopedia" }));
         jPanel3.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 210, 30));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N

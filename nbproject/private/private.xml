@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/GitHub/integrador-i-proyecto-2/src/vista/BusquedaPacienteVista.java</file>
+            <file>file:/D:/GitHub/integrador-i-proyecto-2/src/vista/RegistroHistoriaMedicaVista.java</file>
+            <file>file:/D:/GitHub/integrador-i-proyecto-2/src/vista/RegistroPacienteVista.java</file>
+            <file>file:/D:/GitHub/integrador-i-proyecto-2/src/vista/RegistroCitaMedicaVista.java</file>
+            <file>file:/D:/GitHub/integrador-i-proyecto-2/src/vista/RegistroMedicoVista.java</file>
         </group>
     </open-files>
 </project-private>
