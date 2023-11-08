@@ -207,7 +207,7 @@ public class BusquedaCitaMedicaVista extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "DNI", "Fecha", "Hora", "Doctor", "Consultorio"
+                "DNI", "Fecha", "Hora", "Doctor", "Especialidad"
             }
         ));
         jScrollPane1.setViewportView(tblCitaMedica);

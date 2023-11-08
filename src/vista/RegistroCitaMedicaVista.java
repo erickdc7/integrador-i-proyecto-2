@@ -53,13 +53,11 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txtHora = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txtFecha = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -67,6 +65,8 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBox5 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registro de cita médica");
@@ -195,18 +195,6 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
         jLabel3.setText("Descripción:");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 90, 30));
 
-        txtHora.setForeground(new java.awt.Color(102, 102, 102));
-        txtHora.setText("Formato: hh:mm");
-        txtHora.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                txtHoraFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                txtHoraFocusLost(evt);
-            }
-        });
-        jPanel2.add(txtHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 240, 30));
-
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(18, 23, 33));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -229,29 +217,17 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(18, 23, 33));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("Doctor(a):");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 90, 30));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 90, 30));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(18, 23, 33));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel8.setText("Consultorio:");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 90, 30));
-
-        txtFecha.setForeground(new java.awt.Color(102, 102, 102));
-        txtFecha.setText("Formato: MM/dd/aaaa");
-        txtFecha.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                txtFechaFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                txtFechaFocusLost(evt);
-            }
-        });
-        jPanel2.add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 240, 30));
+        jLabel8.setText("Especialidad:");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 90, 30));
 
         jComboBox1.setForeground(new java.awt.Color(18, 23, 33));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Consultorio 1", "Consultorio 2", "Consultorio 3", "Consultorio 4" }));
-        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 240, 30));
+        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 240, 30));
 
         jComboBox2.setForeground(new java.awt.Color(18, 23, 33));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Paciente 1", "Paciente 2", "Paciente 3", "Paciente 4" }));
@@ -278,7 +254,15 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
 
         jComboBox3.setForeground(new java.awt.Color(18, 23, 33));
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Doctor 1", "Doctor 2", "Doctor 3", "Doctor 4" }));
-        jPanel2.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 240, 30));
+        jPanel2.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 240, 30));
+
+        jComboBox4.setForeground(new java.awt.Color(18, 23, 33));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fecha 1", "Fecha 2", "Fecha 3", "Fecha 4" }));
+        jPanel2.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 240, 30));
+
+        jComboBox5.setForeground(new java.awt.Color(18, 23, 33));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hora 1", "Hora 2", "Hora 3", "Hora 4" }));
+        jPanel2.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 240, 30));
 
         bg.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 500, 500));
 
@@ -350,34 +334,6 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
         BHM.setVisible(true);
     }//GEN-LAST:event_jLabel17MouseClicked
 
-    private void txtFechaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFechaFocusGained
-        if (txtFecha.getText().equals("Formato: MM/dd/aaaa")) {
-            txtFecha.setText("");
-            txtFecha.setForeground(new Color(18, 23, 33));
-        }
-    }//GEN-LAST:event_txtFechaFocusGained
-
-    private void txtFechaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFechaFocusLost
-        if (txtFecha.getText().equals("")) {
-            txtFecha.setText("Formato: MM/dd/aaaa");
-            txtFecha.setForeground(new Color(102, 102, 102));
-        }
-    }//GEN-LAST:event_txtFechaFocusLost
-
-    private void txtHoraFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtHoraFocusGained
-        if (txtHora.getText().equals("Formato: hh:mm")) {
-            txtHora.setText("");
-            txtHora.setForeground(new Color(18, 23, 33));
-        }
-    }//GEN-LAST:event_txtHoraFocusGained
-
-    private void txtHoraFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtHoraFocusLost
-        if (txtHora.getText().equals("")) {
-            txtHora.setText("Formato: hh:mm");
-            txtHora.setForeground(new Color(102, 102, 102));
-        }
-    }//GEN-LAST:event_txtHoraFocusLost
-
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -434,6 +390,8 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -463,7 +421,5 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel logo;
-    private javax.swing.JTextField txtFecha;
-    private javax.swing.JTextField txtHora;
     // End of variables declaration//GEN-END:variables
 }

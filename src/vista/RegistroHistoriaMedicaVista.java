@@ -53,8 +53,6 @@ public class RegistroHistoriaMedicaVista extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -194,65 +192,56 @@ public class RegistroHistoriaMedicaVista extends javax.swing.JFrame {
         jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 180, 30));
 
         jTextField1.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, 210, 30));
-
-        jTextField2.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 210, 30));
-
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel13.setText("Fecha de consulta:");
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 180, 30));
+        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 210, 30));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(18, 23, 33));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel14.setText("Diagnóstico:");
-        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 180, 30));
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 180, 30));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(18, 23, 33));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel15.setText("Tratamiento:");
-        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 180, 30));
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 180, 30));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(18, 23, 33));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel16.setText("Medicamentos recetados:");
-        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 180, 30));
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 180, 30));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(18, 23, 33));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel17.setText("Recomendaciones médicas:");
-        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 180, 30));
+        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 180, 30));
 
         jComboBox1.setForeground(new java.awt.Color(18, 23, 33));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Paciente 1", "Paciente 2", "Paciente 3", "Paciente 4" }));
         jPanel3.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 210, 30));
 
         jTextField3.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel3.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 210, 30));
+        jPanel3.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 210, 30));
 
         jTextField4.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel3.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 210, 30));
+        jPanel3.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 210, 30));
 
         jTextField5.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel3.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 210, 30));
+        jPanel3.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 210, 30));
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(18, 23, 33));
         jButton1.setText("Limpiar datos");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, 130, 30));
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, 130, 30));
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(18, 23, 33));
         jButton2.setText("Registrar historia médica");
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 200, 30));
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 200, 30));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 500, 500));
 
@@ -380,7 +369,6 @@ public class RegistroHistoriaMedicaVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -405,7 +393,6 @@ public class RegistroHistoriaMedicaVista extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;

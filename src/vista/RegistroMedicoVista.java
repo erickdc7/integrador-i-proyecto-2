@@ -251,7 +251,7 @@ public class RegistroMedicoVista extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(18, 23, 33));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel8.setText("Teléfono:");
+        jLabel8.setText("Celular:");
         jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 150, 30));
 
         jTextField3.setForeground(new java.awt.Color(18, 23, 33));

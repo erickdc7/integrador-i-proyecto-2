@@ -211,6 +211,9 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
             }
         ));
         jScrollPane1.setViewportView(tblHistoriaMedica);
+        if (tblHistoriaMedica.getColumnModel().getColumnCount() > 0) {
+            tblHistoriaMedica.getColumnModel().getColumn(2).setHeaderValue("Fecha");
+        }
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 420, 320));
 

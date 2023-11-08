@@ -67,6 +67,8 @@ public class RegistroPacienteVista extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registro de paciente");
@@ -216,41 +218,41 @@ public class RegistroPacienteVista extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(18, 23, 33));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Género:");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 140, 30));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 140, 30));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(18, 23, 33));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("Correo:");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 140, 30));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 140, 30));
 
         jTextField5.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 210, 30));
+        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 210, 30));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(18, 23, 33));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel8.setText("Teléfono:");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 140, 30));
+        jLabel8.setText("Dirección:");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 140, 30));
 
         jTextField6.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 210, 30));
+        jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 210, 30));
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(18, 23, 33));
         jButton1.setText("Limpiar datos");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 130, 30));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 130, 30));
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(18, 23, 33));
         jButton2.setText("Registrar paciente");
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, 170, 30));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 170, 30));
 
         jComboBox1.setForeground(new java.awt.Color(18, 23, 33));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escoger género", "Masculino", "Femenino" }));
-        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 210, 30));
+        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 210, 30));
 
         jLabel17.setForeground(new java.awt.Color(18, 23, 33));
         jLabel17.setText("Complete los siguientes campos con la información del paciente.");
@@ -264,6 +266,15 @@ public class RegistroPacienteVista extends javax.swing.JFrame {
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel16.setText("Apellidos:");
         jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 140, 30));
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(18, 23, 33));
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel18.setText("Celular:");
+        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 140, 30));
+
+        jTextField7.setForeground(new java.awt.Color(18, 23, 33));
+        jPanel2.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, 210, 30));
 
         bg.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 500, 500));
 
@@ -402,6 +413,7 @@ public class RegistroPacienteVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -426,6 +438,7 @@ public class RegistroPacienteVista extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     private javax.swing.JLabel logo;
     // End of variables declaration//GEN-END:variables
 }
