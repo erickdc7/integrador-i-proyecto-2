@@ -104,7 +104,7 @@ public class RegistroPacienteVista extends javax.swing.JFrame {
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 190, 25));
 
         jLabel11.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel11.setText("Registro de cita médica");
+        jLabel11.setText("Generar cita médica");
         jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -134,7 +134,7 @@ public class RegistroPacienteVista extends javax.swing.JFrame {
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 190, 25));
 
         jLabel14.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel14.setText("Registro de historia médica");
+        jLabel14.setText("Generar historia médica");
         jLabel14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -310,7 +310,7 @@ public class RegistroPacienteVista extends javax.swing.JFrame {
         dispose();
 
         // Abre la nueva ventana Registro de Cita Medica
-        RegistroCitaMedicaVista RCM = new RegistroCitaMedicaVista();
+        GenerarCitaMedicaVista RCM = new GenerarCitaMedicaVista();
         RCM.setVisible(true);
     }//GEN-LAST:event_jLabel11MouseClicked
 
@@ -337,7 +337,7 @@ public class RegistroPacienteVista extends javax.swing.JFrame {
         dispose();
 
         // Abre la nueva ventana Registro de Historia Medica
-        RegistroHistoriaMedicaVista RHM = new RegistroHistoriaMedicaVista();
+        GenerarHistoriaMedicaVista RHM = new GenerarHistoriaMedicaVista();
         RHM.setVisible(true);
     }//GEN-LAST:event_jLabel14MouseClicked
 

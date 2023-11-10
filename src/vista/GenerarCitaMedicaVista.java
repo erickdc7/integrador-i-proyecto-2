@@ -7,9 +7,9 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-public class RegistroCitaMedicaVista extends javax.swing.JFrame {
+public class GenerarCitaMedicaVista extends javax.swing.JFrame {
 
-    public RegistroCitaMedicaVista() {
+    public GenerarCitaMedicaVista() {
         initComponents();
         this.setLocationRelativeTo(this);
         setIconImage(getIconImage());
@@ -69,7 +69,7 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
         jComboBox5 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Registro de cita médica");
+        setTitle("Generar cita médica");
         setResizable(false);
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
@@ -107,7 +107,7 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel13.setText("Registro de cita médica");
+        jLabel13.setText("Generar cita médica");
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 170, 25));
 
@@ -132,7 +132,7 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 190, 25));
 
         jLabel16.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel16.setText("Registro de historia médica");
+        jLabel16.setText("Generar historia médica");
         jLabel16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -182,7 +182,7 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel1.setText("Registro de cita médica");
+        jLabel1.setText("Generar cita médica");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         jLabel2.setForeground(new java.awt.Color(18, 23, 33));
@@ -248,7 +248,7 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(18, 23, 33));
-        jButton2.setText("Registrar cita médica");
+        jButton2.setText("Generar cita médica");
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 170, 30));
 
@@ -321,7 +321,7 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
         dispose();
 
         // Abre la nueva ventana Registro de Historia Medica
-        RegistroHistoriaMedicaVista RHM = new RegistroHistoriaMedicaVista();
+        GenerarHistoriaMedicaVista RHM = new GenerarHistoriaMedicaVista();
         RHM.setVisible(true);
     }//GEN-LAST:event_jLabel16MouseClicked
 
@@ -348,20 +348,21 @@ public class RegistroCitaMedicaVista extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegistroCitaMedicaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GenerarCitaMedicaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegistroCitaMedicaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GenerarCitaMedicaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegistroCitaMedicaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GenerarCitaMedicaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegistroCitaMedicaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GenerarCitaMedicaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RegistroCitaMedicaVista().setVisible(true);
+                new GenerarCitaMedicaVista().setVisible(true);
             }
         });
     }
