@@ -184,6 +184,11 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
         jLabel16.setForeground(new java.awt.Color(18, 23, 33));
         jLabel16.setText("Generar atención médica");
         jLabel16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel16MouseClicked(evt);
+            }
+        });
         jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, 170, 25));
 
         jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
@@ -338,7 +343,7 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel11MouseClicked
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
-       // Cierra la ventana actual
+        // Cierra la ventana actual
         dispose();
 
         // Abre la nueva ventana Busqueda de Cita Medica
@@ -365,7 +370,7 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
-       // Cierra la ventana actual
+        // Cierra la ventana actual
         dispose();
 
         // Abre la nueva ventana Busqueda de Historia Medica
@@ -381,6 +386,10 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
         RegistroPacienteVista RP = new RegistroPacienteVista();
         RP.setVisible(true);
     }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel16MouseClicked
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

@@ -51,6 +51,7 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         jSeparator6 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
         jSeparator8 = new javax.swing.JSeparator();
+        jLabel11 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -127,14 +128,14 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 190, 25));
 
         jLabel9.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel9.setText("Generar historia médica");
+        jLabel9.setText("Generar atención médica");
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel9MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 190, 25));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 190, 25));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(18, 23, 33));
@@ -165,6 +166,16 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
 
         jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
         jPanel2.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 190, 5));
+
+        jLabel11.setForeground(new java.awt.Color(18, 23, 33));
+        jLabel11.setText("Generar historia médica");
+        jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 190, 25));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 500));
 
@@ -286,9 +297,9 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         // Cierra la ventana actual
         dispose();
 
-        // Abre la nueva ventana Registro de Historia Medica
-        GenerarHistoriaMedicaVista RHM = new GenerarHistoriaMedicaVista();
-        RHM.setVisible(true);
+        // Abre la nueva ventana Generar Atención Médica
+        GenerarAtencionMedicaVista GAM = new GenerarAtencionMedicaVista();
+        GAM.setVisible(true);
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void txtBuscarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtBuscarFocusGained
@@ -304,6 +315,15 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
             txtBuscar.setForeground(new Color(102, 102, 102));
         }
     }//GEN-LAST:event_txtBuscarFocusLost
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        // Cierra la ventana actual
+        dispose();
+
+        // Abre la nueva ventana Registro de Historia Medica
+        GenerarHistoriaMedicaVista RHM = new GenerarHistoriaMedicaVista();
+        RHM.setVisible(true);
+    }//GEN-LAST:event_jLabel11MouseClicked
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -358,6 +378,7 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

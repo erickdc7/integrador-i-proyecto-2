@@ -49,6 +49,7 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         jSeparator6 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
         jSeparator8 = new javax.swing.JSeparator();
+        jLabel18 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -142,14 +143,14 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 190, 25));
 
         jLabel17.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel17.setText("Búsqueda de historia médica");
+        jLabel17.setText("Generar atención médica");
         jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel17MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 190, 25));
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 190, 25));
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 190, 5));
@@ -174,6 +175,16 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
 
         jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 190, 5));
+
+        jLabel18.setForeground(new java.awt.Color(18, 23, 33));
+        jLabel18.setText("Búsqueda de historia médica");
+        jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel18MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 190, 25));
 
         bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 500));
 
@@ -329,10 +340,19 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         // Cierra la ventana actual
         dispose();
 
+        // Abre la nueva ventana Generar Atención Médica
+        GenerarAtencionMedicaVista GAM = new GenerarAtencionMedicaVista();
+        GAM.setVisible(true);
+    }//GEN-LAST:event_jLabel17MouseClicked
+
+    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+        // Cierra la ventana actual
+        dispose();
+
         // Abre la nueva ventana Busqueda de Historia Medica
         BusquedaHistoriaMedicaVista BHM = new BusquedaHistoriaMedicaVista();
         BHM.setVisible(true);
-    }//GEN-LAST:event_jLabel17MouseClicked
+    }//GEN-LAST:event_jLabel18MouseClicked
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -402,6 +422,7 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
