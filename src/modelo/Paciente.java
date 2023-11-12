@@ -12,9 +12,11 @@ public class Paciente {
     private String celular;
     private String direccion;
 
+    // Constructor vacío
     public Paciente() {
     }
 
+    // Constructor con parámetros
     public Paciente(int idPaciente, String nombres, String apellidos, String dni, int edad, String genero, String correo, String celular, String direccion) {
         this.idPaciente = idPaciente;
         this.nombres = nombres;
@@ -27,6 +29,7 @@ public class Paciente {
         this.direccion = direccion;
     }
 
+    // Métodos getters y setters
     public int getIdPaciente() {
         return idPaciente;
     }
