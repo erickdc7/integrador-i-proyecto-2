@@ -2,7 +2,7 @@ package modelo;
 
 public class Paciente {
 
-    private int id;
+    private int idPaciente;
     private String nombres;
     private String apellidos;
     private String dni;
@@ -15,8 +15,8 @@ public class Paciente {
     public Paciente() {
     }
 
-    public Paciente(int id, String nombres, String apellidos, String dni, int edad, String genero, String correo, String celular, String direccion) {
-        this.id = id;
+    public Paciente(int idPaciente, String nombres, String apellidos, String dni, int edad, String genero, String correo, String celular, String direccion) {
+        this.idPaciente = idPaciente;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.dni = dni;
@@ -27,12 +27,12 @@ public class Paciente {
         this.direccion = direccion;
     }
 
-    public int getId() {
-        return id;
+    public int getIdPaciente() {
+        return idPaciente;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdPaciente(int idPaciente) {
+        this.idPaciente = idPaciente;
     }
 
     public String getNombres() {
