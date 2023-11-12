@@ -3,8 +3,8 @@ package modelo;
 public class AtencionMedica {
 
     private int idMedicoHistoriaClinica;
-    private int idPaciente;
-    private int idEspecialidad;
+    private Paciente paciente;  // Representa la relación con la clase Paciente
+    private Especialidad especialidad;  // Representa la relación con la clase Especialidad
     private String horaAtencion;
     private String fechaAtencion;
     private String observacionMedica;
@@ -13,10 +13,10 @@ public class AtencionMedica {
     public AtencionMedica() {
     }
 
-    public AtencionMedica(int idMedicoHistoriaClinica, int idPaciente, int idEspecialidad, String horaAtencion, String fechaAtencion, String observacionMedica, String indicacionMedica) {
+    public AtencionMedica(int idMedicoHistoriaClinica, Paciente paciente, Especialidad especialidad, String horaAtencion, String fechaAtencion, String observacionMedica, String indicacionMedica) {
         this.idMedicoHistoriaClinica = idMedicoHistoriaClinica;
-        this.idPaciente = idPaciente;
-        this.idEspecialidad = idEspecialidad;
+        this.paciente = paciente;
+        this.especialidad = especialidad;
         this.horaAtencion = horaAtencion;
         this.fechaAtencion = fechaAtencion;
         this.observacionMedica = observacionMedica;
@@ -31,20 +31,20 @@ public class AtencionMedica {
         this.idMedicoHistoriaClinica = idMedicoHistoriaClinica;
     }
 
-    public int getIdPaciente() {
-        return idPaciente;
+    public Paciente getPaciente() {
+        return paciente;
     }
 
-    public void setIdPaciente(int idPaciente) {
-        this.idPaciente = idPaciente;
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
     }
 
-    public int getIdEspecialidad() {
-        return idEspecialidad;
+    public Especialidad getEspecialidad() {
+        return especialidad;
     }
 
-    public void setIdEspecialidad(int idEspecialidad) {
-        this.idEspecialidad = idEspecialidad;
+    public void setEspecialidad(Especialidad especialidad) {
+        this.especialidad = especialidad;
     }
 
     public String getHoraAtencion() {

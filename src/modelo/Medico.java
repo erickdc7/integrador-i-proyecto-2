@@ -3,26 +3,26 @@ package modelo;
 public class Medico {
 
     private int idMedico;
+    private Especialidad especialidad; // Representa la relación con la clase Especialidad
     private String nombres;
     private String apellidos;
     private String dni;
     private int edad;
     private String genero;
     private String celular;
-    private int idEspecialidad;
 
     public Medico() {
     }
 
-    public Medico(int idMedico, String nombres, String apellidos, String dni, int edad, String genero, String celular, int idEspecialidad) {
+    public Medico(int idMedico, Especialidad especialidad, String nombres, String apellidos, String dni, int edad, String genero, String celular) {
         this.idMedico = idMedico;
+        this.especialidad = especialidad;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.dni = dni;
         this.edad = edad;
         this.genero = genero;
         this.celular = celular;
-        this.idEspecialidad = idEspecialidad;
     }
 
     public int getIdMedico() {
@@ -31,6 +31,14 @@ public class Medico {
 
     public void setIdMedico(int idMedico) {
         this.idMedico = idMedico;
+    }
+
+    public Especialidad getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(Especialidad especialidad) {
+        this.especialidad = especialidad;
     }
 
     public String getNombres() {
@@ -79,14 +87,6 @@ public class Medico {
 
     public void setCelular(String celular) {
         this.celular = celular;
-    }
-
-    public int getIdEspecialidad() {
-        return idEspecialidad;
-    }
-
-    public void setIdEspecialidad(int idEspecialidad) {
-        this.idEspecialidad = idEspecialidad;
     }
 
 }
