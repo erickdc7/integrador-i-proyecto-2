@@ -3,7 +3,7 @@ package modelo;
 public class HistoriaClinica {
 
     private int idHistoriaClinica;
-    private Paciente paciente;  // Representa la relación con la clase Paciente
+    private Paciente paciente;
     private String enfermedadAnterior;
     private String tratamientoAnterior;
     private String alergias;
@@ -12,9 +12,11 @@ public class HistoriaClinica {
     private String examenResultado;
     private String tratamientoActual;
 
+    // Constructor vacío
     public HistoriaClinica() {
     }
 
+    // Constructor con parámetros
     public HistoriaClinica(int idHistoriaClinica, Paciente paciente, String enfermedadAnterior, String tratamientoAnterior, String alergias, String enfermedadFamilia, String diagnosticoActual, String examenResultado, String tratamientoActual) {
         this.idHistoriaClinica = idHistoriaClinica;
         this.paciente = paciente;
