@@ -6,9 +6,11 @@ public class Especialidad {
     private String nombreEspecialidad;
     private String grupoPaciente;
 
+    // Constructor vacío
     public Especialidad() {
     }
 
+    // Constructor con parámetros
     public Especialidad(int idEspecialidad, String nombreEspecialidad, String grupoPaciente) {
         this.idEspecialidad = idEspecialidad;
         this.nombreEspecialidad = nombreEspecialidad;
