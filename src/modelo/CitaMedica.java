@@ -3,16 +3,18 @@ package modelo;
 public class CitaMedica {
 
     private int idCitaMedica;
-    private Paciente paciente; // Clase Paciente como referencia a la FK1
-    private Medico medico; // Clase Medico como referencia a la FK2
-    private Especialidad especialidad; // Clase Especialidad como referencia a la FK3
+    private Paciente paciente;
+    private Medico medico;
+    private Especialidad especialidad;
     private String fechaCita;
     private String horaCita;
     private String descripcionCita;
 
+    // Constructor vacío
     public CitaMedica() {
     }
 
+    // Constructor con parámetros
     public CitaMedica(int idCitaMedica, Paciente paciente, Medico medico, Especialidad especialidad, String fechaCita, String horaCita, String descripcionCita) {
         this.idCitaMedica = idCitaMedica;
         this.paciente = paciente;
