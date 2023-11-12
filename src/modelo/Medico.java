@@ -3,7 +3,7 @@ package modelo;
 public class Medico {
 
     private int idMedico;
-    private Especialidad especialidad; // Representa la relación con la clase Especialidad
+    private Especialidad especialidad;
     private String nombres;
     private String apellidos;
     private String dni;
@@ -11,9 +11,11 @@ public class Medico {
     private String genero;
     private String celular;
 
+    // Constructor vacío
     public Medico() {
     }
 
+    // Constructor con parámetros
     public Medico(int idMedico, Especialidad especialidad, String nombres, String apellidos, String dni, int edad, String genero, String celular) {
         this.idMedico = idMedico;
         this.especialidad = especialidad;
