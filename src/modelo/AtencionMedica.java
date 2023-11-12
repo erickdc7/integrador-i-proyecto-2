@@ -3,16 +3,18 @@ package modelo;
 public class AtencionMedica {
 
     private int idMedicoHistoriaClinica;
-    private Paciente paciente;  // Representa la relación con la clase Paciente
-    private Especialidad especialidad;  // Representa la relación con la clase Especialidad
+    private Paciente paciente;
+    private Especialidad especialidad;
     private String horaAtencion;
     private String fechaAtencion;
     private String observacionMedica;
     private String indicacionMedica;
 
+    // Constructor vacío
     public AtencionMedica() {
     }
 
+    // Constructor con parámetros
     public AtencionMedica(int idMedicoHistoriaClinica, Paciente paciente, Especialidad especialidad, String horaAtencion, String fechaAtencion, String observacionMedica, String indicacionMedica) {
         this.idMedicoHistoriaClinica = idMedicoHistoriaClinica;
         this.paciente = paciente;
