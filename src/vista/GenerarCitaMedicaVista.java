@@ -143,7 +143,7 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 190, 25));
 
         jLabel17.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel17.setText("Generar atención médica");
+        jLabel17.setText("Registrar atención médica");
         jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

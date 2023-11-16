@@ -182,7 +182,7 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel16.setText("Generar atención médica");
+        jLabel16.setText("Registrar atención médica");
         jLabel16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -201,11 +201,11 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel1.setText("Generar atención médica");
+        jLabel1.setText("Registrar atención médica");
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         jLabel2.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel2.setText("Complete los siguientes campos para generar una atención médica.");
+        jLabel2.setText("Complete los siguientes campos para registrar una atención médica.");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -258,7 +258,7 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(18, 23, 33));
-        jButton1.setText("Grabar atención médica");
+        jButton1.setText("Registrar atención médica");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, 200, 30));
 

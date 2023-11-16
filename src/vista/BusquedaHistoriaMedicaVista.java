@@ -128,7 +128,7 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 190, 25));
 
         jLabel9.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel9.setText("Generar atención médica");
+        jLabel9.setText("Registrar atención médica");
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

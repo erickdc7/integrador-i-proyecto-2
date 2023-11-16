@@ -143,7 +143,7 @@ public class RegistroMedicoVista extends javax.swing.JFrame {
         jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 190, 25));
 
         jLabel16.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel16.setText("Generar atención médica");
+        jLabel16.setText("Registrar atención médica");
         jLabel16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
