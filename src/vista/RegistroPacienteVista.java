@@ -137,7 +137,7 @@ public class RegistroPacienteVista extends javax.swing.JFrame {
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 190, 25));
 
         jLabel14.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel14.setText("Generar historia médica");
+        jLabel14.setText("Generar historia clínica");
         jLabel14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -181,7 +181,7 @@ public class RegistroPacienteVista extends javax.swing.JFrame {
         jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 190, 5));
 
         jLabel19.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel19.setText("Búsqueda de historia médica");
+        jLabel19.setText("Búsqueda de historia clínica");
         jLabel19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

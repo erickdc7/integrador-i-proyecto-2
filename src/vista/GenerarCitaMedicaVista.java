@@ -133,7 +133,7 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 190, 25));
 
         jLabel16.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel16.setText("Generar historia médica");
+        jLabel16.setText("Generar historia clínica");
         jLabel16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -177,7 +177,7 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 190, 5));
 
         jLabel18.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel18.setText("Búsqueda de historia médica");
+        jLabel18.setText("Búsqueda de historia clínica");
         jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -255,7 +255,7 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(18, 23, 33));
-        jButton2.setText("Generar cita médica");
+        jButton2.setText("Grabar cita médica");
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 170, 30));
 

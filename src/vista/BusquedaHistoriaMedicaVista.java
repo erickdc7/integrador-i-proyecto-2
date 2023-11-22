@@ -139,7 +139,7 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel10.setText("Búsqueda de historia médica");
+        jLabel10.setText("Búsqueda de historia clínica");
         jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 170, 25));
 
@@ -168,7 +168,7 @@ public class BusquedaHistoriaMedicaVista extends javax.swing.JFrame {
         jPanel2.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 190, 5));
 
         jLabel11.setForeground(new java.awt.Color(18, 23, 33));
-        jLabel11.setText("Generar historia médica");
+        jLabel11.setText("Generar historia clínica");
         jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
