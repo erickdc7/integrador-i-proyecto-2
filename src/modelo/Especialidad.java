@@ -4,17 +4,19 @@ public class Especialidad {
 
     private int idEspecialidad;
     private String nombreEspecialidad;
-    private String grupoPaciente;
+    private String descripcionEspecialidad;
+    private String restriccionEspecialidad;
 
     // Constructor vacío
     public Especialidad() {
     }
 
-    // Constructor con parámetros
-    public Especialidad(int idEspecialidad, String nombreEspecialidad, String grupoPaciente) {
+    // Constructor con parámetros 
+    public Especialidad(int idEspecialidad, String nombreEspecialidad, String descripcionEspecialidad, String restriccionEspecialidad) {
         this.idEspecialidad = idEspecialidad;
         this.nombreEspecialidad = nombreEspecialidad;
-        this.grupoPaciente = grupoPaciente;
+        this.descripcionEspecialidad = descripcionEspecialidad;
+        this.restriccionEspecialidad = restriccionEspecialidad;
     }
 
     public int getIdEspecialidad() {
@@ -33,12 +35,20 @@ public class Especialidad {
         this.nombreEspecialidad = nombreEspecialidad;
     }
 
-    public String getGrupoPaciente() {
-        return grupoPaciente;
+    public String getDescripcionEspecialidad() {
+        return descripcionEspecialidad;
     }
 
-    public void setGrupoPaciente(String grupoPaciente) {
-        this.grupoPaciente = grupoPaciente;
+    public void setDescripcionEspecialidad(String descripcionEspecialidad) {
+        this.descripcionEspecialidad = descripcionEspecialidad;
+    }
+
+    public String getRestriccionEspecialidad() {
+        return restriccionEspecialidad;
+    }
+
+    public void setRestriccionEspecialidad(String restriccionEspecialidad) {
+        this.restriccionEspecialidad = restriccionEspecialidad;
     }
 
 }

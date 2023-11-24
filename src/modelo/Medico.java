@@ -10,13 +10,14 @@ public class Medico {
     private int edad;
     private String genero;
     private String celular;
+    private String correo;
 
     // Constructor vacío
     public Medico() {
     }
 
     // Constructor con parámetros
-    public Medico(int idMedico, Especialidad especialidad, String nombres, String apellidos, String dni, int edad, String genero, String celular) {
+    public Medico(int idMedico, Especialidad especialidad, String nombres, String apellidos, String dni, int edad, String genero, String celular, String correo) {
         this.idMedico = idMedico;
         this.especialidad = especialidad;
         this.nombres = nombres;
@@ -25,6 +26,7 @@ public class Medico {
         this.edad = edad;
         this.genero = genero;
         this.celular = celular;
+        this.correo = correo;
     }
 
     public int getIdMedico() {
@@ -89,6 +91,14 @@ public class Medico {
 
     public void setCelular(String celular) {
         this.celular = celular;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
 }

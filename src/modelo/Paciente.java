@@ -11,13 +11,14 @@ public class Paciente {
     private String correo;
     private String celular;
     private String direccion;
+    private String distrito;
 
     // Constructor vacío
     public Paciente() {
     }
 
     // Constructor con parámetros
-    public Paciente(int idPaciente, String nombres, String apellidos, String dni, int edad, String genero, String correo, String celular, String direccion) {
+    public Paciente(int idPaciente, String nombres, String apellidos, String dni, int edad, String genero, String correo, String celular, String direccion, String distrito) {
         this.idPaciente = idPaciente;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -27,9 +28,9 @@ public class Paciente {
         this.correo = correo;
         this.celular = celular;
         this.direccion = direccion;
+        this.distrito = distrito;
     }
 
-    // Métodos getters y setters
     public int getIdPaciente() {
         return idPaciente;
     }
@@ -100,6 +101,14 @@ public class Paciente {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public String getDistrito() {
+        return distrito;
+    }
+
+    public void setDistrito(String distrito) {
+        this.distrito = distrito;
     }
 
 }

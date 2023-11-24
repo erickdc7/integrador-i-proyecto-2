@@ -8,21 +8,21 @@ public class CitaMedica {
     private Especialidad especialidad;
     private String fechaCita;
     private String horaCita;
-    private String descripcionCita;
+    private String motivoCita;
 
     // Constructor vacío
     public CitaMedica() {
     }
 
     // Constructor con parámetros
-    public CitaMedica(int idCitaMedica, Paciente paciente, Medico medico, Especialidad especialidad, String fechaCita, String horaCita, String descripcionCita) {
+    public CitaMedica(int idCitaMedica, Paciente paciente, Medico medico, Especialidad especialidad, String fechaCita, String horaCita, String motivoCita) {
         this.idCitaMedica = idCitaMedica;
         this.paciente = paciente;
         this.medico = medico;
         this.especialidad = especialidad;
         this.fechaCita = fechaCita;
         this.horaCita = horaCita;
-        this.descripcionCita = descripcionCita;
+        this.motivoCita = motivoCita;
     }
 
     public int getIdCitaMedica() {
@@ -73,12 +73,12 @@ public class CitaMedica {
         this.horaCita = horaCita;
     }
 
-    public String getDescripcionCita() {
-        return descripcionCita;
+    public String getMotivoCita() {
+        return motivoCita;
     }
 
-    public void setDescripcionCita(String descripcionCita) {
-        this.descripcionCita = descripcionCita;
+    public void setMotivoCita(String motivoCita) {
+        this.motivoCita = motivoCita;
     }
 
 }

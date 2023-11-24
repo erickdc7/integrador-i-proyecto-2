@@ -7,6 +7,7 @@ public class AtencionMedica {
     private Especialidad especialidad;
     private String horaAtencion;
     private String fechaAtencion;
+    private String estadoAtencion;
     private String observacionMedica;
     private String indicacionMedica;
 

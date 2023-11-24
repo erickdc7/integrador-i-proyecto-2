@@ -4,29 +4,29 @@ public class HistoriaClinica {
 
     private int idHistoriaClinica;
     private Paciente paciente;
-    private String enfermedadAnterior;
-    private String tratamientoAnterior;
-    private String alergias;
-    private String enfermedadFamilia;
-    private String diagnosticoActual;
-    private String examenResultado;
-    private String tratamientoActual;
+    private String enfermedadPatologica;
+    private String tratamiento;
+    private String enfermedadNoPatologica;
+    private String historialPadre;
+    private String historialMadre;
+    private String historialAbuelosPat;
+    private String historialAbuelosMat;
 
     // Constructor vacío
     public HistoriaClinica() {
     }
 
-    // Constructor con parámetros
-    public HistoriaClinica(int idHistoriaClinica, Paciente paciente, String enfermedadAnterior, String tratamientoAnterior, String alergias, String enfermedadFamilia, String diagnosticoActual, String examenResultado, String tratamientoActual) {
+    // Constructor con parámetros 
+    public HistoriaClinica(int idHistoriaClinica, Paciente paciente, String enfermedadPatologica, String tratamiento, String enfermedadNoPatologica, String historialPadre, String historialMadre, String historialAbuelosPat, String historialAbuelosMat) {
         this.idHistoriaClinica = idHistoriaClinica;
         this.paciente = paciente;
-        this.enfermedadAnterior = enfermedadAnterior;
-        this.tratamientoAnterior = tratamientoAnterior;
-        this.alergias = alergias;
-        this.enfermedadFamilia = enfermedadFamilia;
-        this.diagnosticoActual = diagnosticoActual;
-        this.examenResultado = examenResultado;
-        this.tratamientoActual = tratamientoActual;
+        this.enfermedadPatologica = enfermedadPatologica;
+        this.tratamiento = tratamiento;
+        this.enfermedadNoPatologica = enfermedadNoPatologica;
+        this.historialPadre = historialPadre;
+        this.historialMadre = historialMadre;
+        this.historialAbuelosPat = historialAbuelosPat;
+        this.historialAbuelosMat = historialAbuelosMat;
     }
 
     public int getIdHistoriaClinica() {
@@ -45,60 +45,60 @@ public class HistoriaClinica {
         this.paciente = paciente;
     }
 
-    public String getEnfermedadAnterior() {
-        return enfermedadAnterior;
+    public String getEnfermedadPatologica() {
+        return enfermedadPatologica;
     }
 
-    public void setEnfermedadAnterior(String enfermedadAnterior) {
-        this.enfermedadAnterior = enfermedadAnterior;
+    public void setEnfermedadPatologica(String enfermedadPatologica) {
+        this.enfermedadPatologica = enfermedadPatologica;
     }
 
-    public String getTratamientoAnterior() {
-        return tratamientoAnterior;
+    public String getTratamiento() {
+        return tratamiento;
     }
 
-    public void setTratamientoAnterior(String tratamientoAnterior) {
-        this.tratamientoAnterior = tratamientoAnterior;
+    public void setTratamiento(String tratamiento) {
+        this.tratamiento = tratamiento;
     }
 
-    public String getAlergias() {
-        return alergias;
+    public String getEnfermedadNoPatologica() {
+        return enfermedadNoPatologica;
     }
 
-    public void setAlergias(String alergias) {
-        this.alergias = alergias;
+    public void setEnfermedadNoPatologica(String enfermedadNoPatologica) {
+        this.enfermedadNoPatologica = enfermedadNoPatologica;
     }
 
-    public String getEnfermedadFamilia() {
-        return enfermedadFamilia;
+    public String getHistorialPadre() {
+        return historialPadre;
     }
 
-    public void setEnfermedadFamilia(String enfermedadFamilia) {
-        this.enfermedadFamilia = enfermedadFamilia;
+    public void setHistorialPadre(String historialPadre) {
+        this.historialPadre = historialPadre;
     }
 
-    public String getDiagnosticoActual() {
-        return diagnosticoActual;
+    public String getHistorialMadre() {
+        return historialMadre;
     }
 
-    public void setDiagnosticoActual(String diagnosticoActual) {
-        this.diagnosticoActual = diagnosticoActual;
+    public void setHistorialMadre(String historialMadre) {
+        this.historialMadre = historialMadre;
     }
 
-    public String getExamenResultado() {
-        return examenResultado;
+    public String getHistorialAbuelosPat() {
+        return historialAbuelosPat;
     }
 
-    public void setExamenResultado(String examenResultado) {
-        this.examenResultado = examenResultado;
+    public void setHistorialAbuelosPat(String historialAbuelosPat) {
+        this.historialAbuelosPat = historialAbuelosPat;
     }
 
-    public String getTratamientoActual() {
-        return tratamientoActual;
+    public String getHistorialAbuelosMat() {
+        return historialAbuelosMat;
     }
 
-    public void setTratamientoActual(String tratamientoActual) {
-        this.tratamientoActual = tratamientoActual;
+    public void setHistorialAbuelosMat(String historialAbuelosMat) {
+        this.historialAbuelosMat = historialAbuelosMat;
     }
 
 }
