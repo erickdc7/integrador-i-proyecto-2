@@ -6,6 +6,7 @@ public class HistoriaClinica {
     private Paciente paciente;
     private String enfermedadPatologica;
     private String tratamiento;
+    private String alergias;
     private String enfermedadNoPatologica;
     private String historialPadre;
     private String historialMadre;
@@ -14,14 +15,25 @@ public class HistoriaClinica {
 
     // Constructor vacío
     public HistoriaClinica() {
+        this.idHistoriaClinica = 0; // O el valor predeterminado que desees
+        this.paciente = null; // O el valor predeterminado que desees
+        this.enfermedadPatologica = "";
+        this.tratamiento = "";
+        this.alergias = "";
+        this.enfermedadNoPatologica = "";
+        this.historialPadre = "";
+        this.historialMadre = "";
+        this.historialAbuelosPat = "";
+        this.historialAbuelosMat = "";
     }
 
     // Constructor con parámetros 
-    public HistoriaClinica(int idHistoriaClinica, Paciente paciente, String enfermedadPatologica, String tratamiento, String enfermedadNoPatologica, String historialPadre, String historialMadre, String historialAbuelosPat, String historialAbuelosMat) {
+    public HistoriaClinica(String enfermedadPatologica, String tratamiento, String alergias, String enfermedadNoPatologica, String historialPadre, String historialMadre, String historialAbuelosPat, String historialAbuelosMat) {
         this.idHistoriaClinica = idHistoriaClinica;
         this.paciente = paciente;
         this.enfermedadPatologica = enfermedadPatologica;
         this.tratamiento = tratamiento;
+        this.alergias = alergias;
         this.enfermedadNoPatologica = enfermedadNoPatologica;
         this.historialPadre = historialPadre;
         this.historialMadre = historialMadre;
@@ -59,6 +71,14 @@ public class HistoriaClinica {
 
     public void setTratamiento(String tratamiento) {
         this.tratamiento = tratamiento;
+    }
+
+    public String getAlergias() {
+        return alergias;
+    }
+
+    public void setAlergias(String alergias) {
+        this.alergias = alergias;
     }
 
     public String getEnfermedadNoPatologica() {

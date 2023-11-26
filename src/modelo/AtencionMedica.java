@@ -16,12 +16,13 @@ public class AtencionMedica {
     }
 
     // Constructor con parámetros
-    public AtencionMedica(int idMedicoHistoriaClinica, Paciente paciente, Especialidad especialidad, String horaAtencion, String fechaAtencion, String observacionMedica, String indicacionMedica) {
+    public AtencionMedica(int idMedicoHistoriaClinica, Paciente paciente, Especialidad especialidad, String horaAtencion, String fechaAtencion, String estadoAtencion, String observacionMedica, String indicacionMedica) {
         this.idMedicoHistoriaClinica = idMedicoHistoriaClinica;
         this.paciente = paciente;
         this.especialidad = especialidad;
         this.horaAtencion = horaAtencion;
         this.fechaAtencion = fechaAtencion;
+        this.estadoAtencion = estadoAtencion;
         this.observacionMedica = observacionMedica;
         this.indicacionMedica = indicacionMedica;
     }
@@ -64,6 +65,14 @@ public class AtencionMedica {
 
     public void setFechaAtencion(String fechaAtencion) {
         this.fechaAtencion = fechaAtencion;
+    }
+
+    public String getEstadoAtencion() {
+        return estadoAtencion;
+    }
+
+    public void setEstadoAtencion(String estadoAtencion) {
+        this.estadoAtencion = estadoAtencion;
     }
 
     public String getObservacionMedica() {

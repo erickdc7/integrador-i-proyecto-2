@@ -1,12 +1,19 @@
 package vista;
 
+import controlador.ControladorAtencionMedica;
+import static controlador.ControladorAtencionMedica.obtenerIdEspecialidad;
+import static controlador.ControladorAtencionMedica.obtenerIdPaciente;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.util.List;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
+
+    private ControladorAtencionMedica controladorAtencionMedica;
 
     public GenerarAtencionMedicaVista() {
         initComponents();
@@ -14,6 +21,59 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
         setIconImage(getIconImage());
 
         SetImageLabel(logo, "src/img/logo.png");
+
+        controladorAtencionMedica = new ControladorAtencionMedica();
+
+        // Llenar el JComboBox txtPaciente con los apellidos de la base de datos
+        llenarComboBoxPacientes();
+
+        // Llenar el JComboBox txtEspecialidad con los nombres de las especialidades de la base de datos
+        llenarComboBoxEspecialidades();
+
+        // Llenar el JComboBox txtMedico con los apellidos de los médicos de la base de datos
+        llenarComboBoxMedicos();
+    }
+
+    // Agregar este método en GenerarAtencionMedicaVista
+    private void llenarComboBoxPacientes() {
+        ControladorAtencionMedica controladorPaciente = new ControladorAtencionMedica();
+        List<String> apellidos = controladorPaciente.obtenerApellidosPacientes();
+
+        // Limpiar el combo box antes de agregar los nuevos elementos
+        txtPaciente.removeAllItems();
+
+        // Agregar los apellidos al combo box
+        for (String apellido : apellidos) {
+            txtPaciente.addItem(apellido);
+        }
+    }
+
+    // En GenerarAtencionMedicaVista
+    private void llenarComboBoxEspecialidades() {
+        ControladorAtencionMedica controladorEspecialidad = new ControladorAtencionMedica();
+        List<String> nombresEspecialidades = controladorEspecialidad.obtenerNombresEspecialidades();
+
+        // Limpiar el combo box antes de agregar los nuevos elementos
+        txtEspecialidad.removeAllItems();
+
+        // Agregar los nombres de las especialidades al combo box
+        for (String nombreEspecialidad : nombresEspecialidades) {
+            txtEspecialidad.addItem(nombreEspecialidad);
+        }
+    }
+
+    // En GenerarAtencionMedicaVista
+    private void llenarComboBoxMedicos() {
+        ControladorAtencionMedica controladorMedico = new ControladorAtencionMedica();
+        List<String> apellidosMedicos = controladorMedico.obtenerApellidosMedicos();
+
+        // Limpiar el combo box antes de agregar los nuevos elementos
+        txtMedico.removeAllItems();
+
+        // Agregar los apellidos de los médicos al combo box
+        for (String apellidoMedico : apellidosMedicos) {
+            txtMedico.addItem(apellidoMedico);
+        }
     }
 
     // Icono del JFrame
@@ -53,25 +113,25 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        txtHistoriaClinica = new javax.swing.JTextField();
+        txtMedico = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        txtDni = new javax.swing.JTextField();
+        txtPaciente = new javax.swing.JComboBox<>();
+        txtEspecialidad = new javax.swing.JComboBox<>();
+        btnRegistrarAtencionMedica = new javax.swing.JButton();
+        btnLimpiarDatos = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txtFecha = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        txtHora = new javax.swing.JTextField();
+        txtIndicacionMedica = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        txtObsMedica = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registrar atención médica");
@@ -214,12 +274,13 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
         jLabel3.setText("Médico:");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 140, 30));
 
-        jTextField1.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 210, 30));
+        txtHistoriaClinica.setForeground(new java.awt.Color(18, 23, 33));
+        txtHistoriaClinica.setFocusable(false);
+        jPanel3.add(txtHistoriaClinica, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 210, 30));
 
-        jComboBox1.setForeground(new java.awt.Color(18, 23, 33));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Médico 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel3.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 210, 30));
+        txtMedico.setForeground(new java.awt.Color(18, 23, 33));
+        txtMedico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Médico 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel3.add(txtMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 210, 30));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(18, 23, 33));
@@ -245,28 +306,38 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
         jLabel7.setText("Especialidad:");
         jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 140, 30));
 
-        jTextField2.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 210, 30));
+        txtDni.setForeground(new java.awt.Color(18, 23, 33));
+        jPanel3.add(txtDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 210, 30));
 
-        jComboBox2.setForeground(new java.awt.Color(18, 23, 33));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Paciente 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel3.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 210, 30));
+        txtPaciente.setForeground(new java.awt.Color(18, 23, 33));
+        txtPaciente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Paciente 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel3.add(txtPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 210, 30));
 
-        jComboBox3.setForeground(new java.awt.Color(18, 23, 33));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Especialidad 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel3.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 210, 30));
+        txtEspecialidad.setForeground(new java.awt.Color(18, 23, 33));
+        txtEspecialidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Especialidad 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel3.add(txtEspecialidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 210, 30));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(18, 23, 33));
-        jButton1.setText("Registrar atención médica");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, 200, 30));
+        btnRegistrarAtencionMedica.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnRegistrarAtencionMedica.setForeground(new java.awt.Color(18, 23, 33));
+        btnRegistrarAtencionMedica.setText("Registrar atención médica");
+        btnRegistrarAtencionMedica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRegistrarAtencionMedica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarAtencionMedicaActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnRegistrarAtencionMedica, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, 200, 30));
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(18, 23, 33));
-        jButton2.setText("Limpiar datos");
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 130, 30));
+        btnLimpiarDatos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnLimpiarDatos.setForeground(new java.awt.Color(18, 23, 33));
+        btnLimpiarDatos.setText("Limpiar datos");
+        btnLimpiarDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLimpiarDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarDatosActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnLimpiarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 130, 30));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(18, 23, 33));
@@ -274,8 +345,8 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
         jLabel17.setText("Fecha de atención:");
         jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 140, 30));
 
-        jTextField3.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel3.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 210, 30));
+        txtFecha.setForeground(new java.awt.Color(18, 23, 33));
+        jPanel3.add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 210, 30));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(18, 23, 33));
@@ -283,11 +354,11 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
         jLabel18.setText("Hora de atención:");
         jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 140, 30));
 
-        jTextField4.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel3.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 210, 30));
+        txtHora.setForeground(new java.awt.Color(18, 23, 33));
+        jPanel3.add(txtHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 210, 30));
 
-        jTextField5.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel3.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, 210, 30));
+        txtIndicacionMedica.setForeground(new java.awt.Color(18, 23, 33));
+        jPanel3.add(txtIndicacionMedica, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, 210, 30));
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(18, 23, 33));
@@ -301,8 +372,8 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
         jLabel20.setText("Observación médica:");
         jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 140, 30));
 
-        jTextField6.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel3.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 210, 30));
+        txtObsMedica.setForeground(new java.awt.Color(18, 23, 33));
+        jPanel3.add(txtObsMedica, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 210, 30));
 
         bg.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 500, 550));
 
@@ -391,6 +462,42 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel16MouseClicked
 
+    private void btnRegistrarAtencionMedicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarAtencionMedicaActionPerformed
+        int idPaciente = obtenerIdPaciente(txtPaciente.getSelectedItem().toString());
+        int idEspecialidad = obtenerIdEspecialidad(txtEspecialidad.getSelectedItem().toString());
+        String horaAtencion = txtHora.getText();
+        String fechaAtencion = txtFecha.getText();
+        String observacionMedica = txtObsMedica.getText();
+        String indicacionMedica = txtIndicacionMedica.getText();
+
+        // Llamada al controlador para registrar la atención médica
+        int idHistoriaClinica = ControladorAtencionMedica.registrarAtencionMedica(idPaciente, idEspecialidad,
+                horaAtencion, fechaAtencion, observacionMedica, indicacionMedica);
+
+        if (idHistoriaClinica != -1) {
+            // Registro exitoso
+            JOptionPane.showMessageDialog(this, "Registro de atención médica exitoso.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            // Error en el registro
+            JOptionPane.showMessageDialog(this, "Error en el registro. Por favor, inténtelo de nuevo.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+        // Mostrar el ID en el campo txtHistoriaClinica
+        txtHistoriaClinica.setText(String.valueOf(idHistoriaClinica));
+    }//GEN-LAST:event_btnRegistrarAtencionMedicaActionPerformed
+
+    private void btnLimpiarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarDatosActionPerformed
+        txtDni.setText("");
+        txtPaciente.setSelectedIndex(0);
+        txtHistoriaClinica.setText("");
+        txtFecha.setText("");
+        txtHora.setText("");
+        txtObsMedica.setText("");
+        txtIndicacionMedica.setText("");
+        txtEspecialidad.setSelectedIndex(0);
+        txtMedico.setSelectedIndex(0);
+    }//GEN-LAST:event_btnLimpiarDatosActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -442,11 +549,8 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JButton btnLimpiarDatos;
+    private javax.swing.JButton btnRegistrarAtencionMedica;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -477,12 +581,15 @@ public class GenerarAtencionMedicaVista extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JLabel logo;
+    private javax.swing.JTextField txtDni;
+    private javax.swing.JComboBox<String> txtEspecialidad;
+    private javax.swing.JTextField txtFecha;
+    private javax.swing.JTextField txtHistoriaClinica;
+    private javax.swing.JTextField txtHora;
+    private javax.swing.JTextField txtIndicacionMedica;
+    private javax.swing.JComboBox<String> txtMedico;
+    private javax.swing.JTextField txtObsMedica;
+    private javax.swing.JComboBox<String> txtPaciente;
     // End of variables declaration//GEN-END:variables
 }

@@ -17,8 +17,8 @@ public class Medico {
     }
 
     // Constructor con parámetros
-    public Medico(int idMedico, Especialidad especialidad, String nombres, String apellidos, String dni, int edad, String genero, String celular, String correo) {
-        this.idMedico = idMedico;
+    public Medico(Especialidad especialidad, String nombres, String apellidos, String dni, int edad, String genero, String celular, String correo) {
+        // Aquí puedes crear una instancia de Especialidad si es necesario, o simplemente almacenar la cadena
         this.especialidad = especialidad;
         this.nombres = nombres;
         this.apellidos = apellidos;

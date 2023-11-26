@@ -8,10 +8,10 @@ public class Especialidad {
     private String restriccionEspecialidad;
 
     // Constructor vacío
-    public Especialidad() {
+    public Especialidad(String especialidad) {
     }
 
-    // Constructor con parámetros 
+    // Constructor con parámetros
     public Especialidad(int idEspecialidad, String nombreEspecialidad, String descripcionEspecialidad, String restriccionEspecialidad) {
         this.idEspecialidad = idEspecialidad;
         this.nombreEspecialidad = nombreEspecialidad;

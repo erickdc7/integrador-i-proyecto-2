@@ -59,15 +59,15 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        txtEspecialidad = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
+        txtMotivo = new javax.swing.JTextArea();
+        btnLimpiarDatos = new javax.swing.JButton();
+        btnGrabarCitaMedica = new javax.swing.JButton();
+        txtMedico = new javax.swing.JComboBox<>();
+        txtFecha = new javax.swing.JComboBox<>();
+        txtHora = new javax.swing.JComboBox<>();
+        txtIdHistoriaClinica = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Generar cita médica");
@@ -236,43 +236,49 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         jLabel8.setText("Especialidad:");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 90, 30));
 
-        jComboBox1.setForeground(new java.awt.Color(18, 23, 33));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Especialidad 1", "Especialidad 2", "Especialidad 3", "Especialidad 4" }));
-        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 240, 30));
+        txtEspecialidad.setForeground(new java.awt.Color(18, 23, 33));
+        txtEspecialidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Especialidad 1", "Especialidad 2", "Especialidad 3", "Especialidad 4" }));
+        jPanel2.add(txtEspecialidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 240, 30));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setForeground(new java.awt.Color(18, 23, 33));
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtMotivo.setColumns(20);
+        txtMotivo.setForeground(new java.awt.Color(18, 23, 33));
+        txtMotivo.setRows(5);
+        jScrollPane1.setViewportView(txtMotivo);
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 240, 110));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(18, 23, 33));
-        jButton1.setText("Limpiar datos");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 130, 30));
+        btnLimpiarDatos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnLimpiarDatos.setForeground(new java.awt.Color(18, 23, 33));
+        btnLimpiarDatos.setText("Limpiar datos");
+        btnLimpiarDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel2.add(btnLimpiarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 130, 30));
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(18, 23, 33));
-        jButton2.setText("Grabar cita médica");
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 170, 30));
+        btnGrabarCitaMedica.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnGrabarCitaMedica.setForeground(new java.awt.Color(18, 23, 33));
+        btnGrabarCitaMedica.setText("Grabar cita médica");
+        btnGrabarCitaMedica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel2.add(btnGrabarCitaMedica, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 170, 30));
 
-        jComboBox3.setForeground(new java.awt.Color(18, 23, 33));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Médico 1", "Médico 2", "Médico 3", "Médico 4" }));
-        jPanel2.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 240, 30));
+        txtMedico.setForeground(new java.awt.Color(18, 23, 33));
+        txtMedico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Médico 1", "Médico 2", "Médico 3", "Médico 4" }));
+        jPanel2.add(txtMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 240, 30));
 
-        jComboBox4.setForeground(new java.awt.Color(18, 23, 33));
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fecha 1", "Fecha 2", "Fecha 3", "Fecha 4" }));
-        jPanel2.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 240, 30));
+        txtFecha.setForeground(new java.awt.Color(18, 23, 33));
+        txtFecha.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "3/12/2023", "5/12/2023", "6/12/2023", "7/12/2023", "9/12/2023" }));
+        jPanel2.add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 240, 30));
 
-        jComboBox5.setForeground(new java.awt.Color(18, 23, 33));
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hora 1", "Hora 2", "Hora 3", "Hora 4" }));
-        jPanel2.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 240, 30));
+        txtHora.setForeground(new java.awt.Color(18, 23, 33));
+        txtHora.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8:30 a.m.", "9:00 a.m.", "10:30 a.m.", "12:00 p.m.", "14:30 p.m.", "15.00 p.m.", " ", " " }));
+        txtHora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtHoraActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 240, 30));
 
-        jTextField1.setForeground(new java.awt.Color(18, 23, 33));
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 240, 30));
+        txtIdHistoriaClinica.setForeground(new java.awt.Color(18, 23, 33));
+        txtIdHistoriaClinica.setFocusable(false);
+        jPanel2.add(txtIdHistoriaClinica, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 240, 30));
 
         bg.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 500, 550));
 
@@ -353,6 +359,10 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         BHM.setVisible(true);
     }//GEN-LAST:event_jLabel18MouseClicked
 
+    private void txtHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHoraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHoraActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -405,12 +415,8 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JButton btnGrabarCitaMedica;
+    private javax.swing.JButton btnLimpiarDatos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -439,8 +445,12 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel logo;
+    private javax.swing.JComboBox<String> txtEspecialidad;
+    private javax.swing.JComboBox<String> txtFecha;
+    private javax.swing.JComboBox<String> txtHora;
+    private javax.swing.JTextField txtIdHistoriaClinica;
+    private javax.swing.JComboBox<String> txtMedico;
+    private javax.swing.JTextArea txtMotivo;
     // End of variables declaration//GEN-END:variables
 }
