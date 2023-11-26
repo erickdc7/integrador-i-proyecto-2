@@ -9,7 +9,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import modelo.HistoriaClinica;
-import modelo.Paciente;
 
 public class GenerarHistoriaMedicaVista extends javax.swing.JFrame {
 

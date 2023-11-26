@@ -3,8 +3,6 @@ package modelo;
 public class CitaMedica {
 
     private int idCitaMedica;
-    private Paciente paciente;
-    private Medico medico;
     private Especialidad especialidad;
     private String fechaCita;
     private String horaCita;
@@ -15,10 +13,8 @@ public class CitaMedica {
     }
 
     // Constructor con parámetros
-    public CitaMedica(int idCitaMedica, Paciente paciente, Medico medico, Especialidad especialidad, String fechaCita, String horaCita, String motivoCita) {
+    public CitaMedica(int idCitaMedica, Especialidad especialidad, String fechaCita, String horaCita, String motivoCita) {
         this.idCitaMedica = idCitaMedica;
-        this.paciente = paciente;
-        this.medico = medico;
         this.especialidad = especialidad;
         this.fechaCita = fechaCita;
         this.horaCita = horaCita;
@@ -31,22 +27,6 @@ public class CitaMedica {
 
     public void setIdCitaMedica(int idCitaMedica) {
         this.idCitaMedica = idCitaMedica;
-    }
-
-    public Paciente getPaciente() {
-        return paciente;
-    }
-
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
-    }
-
-    public Medico getMedico() {
-        return medico;
-    }
-
-    public void setMedico(Medico medico) {
-        this.medico = medico;
     }
 
     public Especialidad getEspecialidad() {

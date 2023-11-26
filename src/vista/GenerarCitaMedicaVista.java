@@ -1,13 +1,18 @@
 package vista;
 
-import java.awt.Color;
+import static controlador.ControladorAtencionMedica.obtenerIdEspecialidad;
+import controlador.ControladorCitaMedica;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.util.List;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class GenerarCitaMedicaVista extends javax.swing.JFrame {
+
+    private final ControladorCitaMedica controladorCitaMedica;
 
     public GenerarCitaMedicaVista() {
         initComponents();
@@ -15,6 +20,94 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         setIconImage(getIconImage());
 
         SetImageLabel(logo, "src/img/logo.png");
+
+        // Inicializar el controlador
+        controladorCitaMedica = new ControladorCitaMedica();
+
+        // Llenar el ComboBox de Historia Clínica al iniciar la vista
+        llenarComboBoxHistoriaClinica();
+
+        // Llenar el ComboBox de Especialidad
+        llenarComboBoxEspecialidad();
+
+        // Llenar el ComboBox de Médicos al iniciar la vista
+        llenarComboBoxMedicos();
+
+        // Llenar el ComboBox de Fechas de Atención al iniciar la vista
+        llenarComboBoxFechasAtencion();
+
+        // Llenar el ComboBox de Horas de Atención al iniciar la ventana
+        llenarComboBoxHorasAtencion();
+    }
+
+    // Método para llenar el ComboBox de Horas de Atención
+    private void llenarComboBoxHorasAtencion() {
+        // Obtener todas las horas de atención desde el controlador
+        List<String> horasAtencion = controladorCitaMedica.obtenerTodasHorasAtencion();
+
+        // Limpiar el ComboBox antes de agregar los nuevos elementos
+        txtHora.removeAllItems();
+
+        // Agregar las horas al ComboBox
+        for (String hora : horasAtencion) {
+            txtHora.addItem(hora);
+        }
+    }
+
+    // Método para llenar el ComboBox de Historia Clínica
+    private void llenarComboBoxHistoriaClinica() {
+        // Obtener los IDs de historia clínica desde el controlador
+        List<Integer> idsHistoriaClinica = controladorCitaMedica.obtenerIdsHistoriaClinica();
+
+        // Limpiar el ComboBox antes de agregar los nuevos elementos
+        txtHistoriaClinica.removeAllItems();
+
+        // Agregar los IDs al ComboBox
+        for (Integer id : idsHistoriaClinica) {
+            txtHistoriaClinica.addItem(String.valueOf(id));
+        }
+    }
+
+    // Método para llenar el ComboBox de Especialidad
+    private void llenarComboBoxEspecialidad() {
+        // Obtener los nombres de especialidades desde el controlador
+        List<String> nombresEspecialidades = controladorCitaMedica.obtenerNombresEspecialidades();
+
+        // Limpiar el ComboBox antes de agregar los nuevos elementos
+        txtEspecialidad.removeAllItems();
+
+        // Agregar los nombres de especialidades al ComboBox
+        for (String nombre : nombresEspecialidades) {
+            txtEspecialidad.addItem(nombre);
+        }
+    }
+
+    // Método para llenar el ComboBox de Médicos
+    private void llenarComboBoxMedicos() {
+        // Obtener los apellidos de los médicos desde el controlador
+        List<String> apellidosMedicos = controladorCitaMedica.obtenerApellidosMedicos();
+
+        // Limpiar el ComboBox antes de agregar los nuevos elementos
+        txtMedico.removeAllItems();
+
+        // Agregar los apellidos al ComboBox
+        for (String apellido : apellidosMedicos) {
+            txtMedico.addItem(apellido);
+        }
+    }
+
+    // Método para llenar el ComboBox de Fechas de Atención
+    private void llenarComboBoxFechasAtencion() {
+        // Obtener las fechas de atención desde el controlador
+        List<String> fechasAtencion = controladorCitaMedica.obtenerFechasAtencion();
+
+        // Limpiar el ComboBox antes de agregar los nuevos elementos
+        txtFecha.removeAllItems();
+
+        // Agregar las fechas al ComboBox
+        for (String fecha : fechasAtencion) {
+            txtFecha.addItem(fecha);
+        }
     }
 
     // Icono del JFrame
@@ -59,7 +152,7 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txtEspecialidad = new javax.swing.JComboBox<>();
+        txtHistoriaClinica = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtMotivo = new javax.swing.JTextArea();
         btnLimpiarDatos = new javax.swing.JButton();
@@ -67,7 +160,7 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         txtMedico = new javax.swing.JComboBox<>();
         txtFecha = new javax.swing.JComboBox<>();
         txtHora = new javax.swing.JComboBox<>();
-        txtIdHistoriaClinica = new javax.swing.JTextField();
+        txtEspecialidad = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Generar cita médica");
@@ -236,9 +329,9 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         jLabel8.setText("Especialidad:");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 90, 30));
 
-        txtEspecialidad.setForeground(new java.awt.Color(18, 23, 33));
-        txtEspecialidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Especialidad 1", "Especialidad 2", "Especialidad 3", "Especialidad 4" }));
-        jPanel2.add(txtEspecialidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 240, 30));
+        txtHistoriaClinica.setForeground(new java.awt.Color(18, 23, 33));
+        txtHistoriaClinica.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Historia Clínica 1", "Especialidad 2", "Especialidad 3", "Especialidad 4" }));
+        jPanel2.add(txtHistoriaClinica, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 240, 30));
 
         txtMotivo.setColumns(20);
         txtMotivo.setForeground(new java.awt.Color(18, 23, 33));
@@ -251,12 +344,22 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         btnLimpiarDatos.setForeground(new java.awt.Color(18, 23, 33));
         btnLimpiarDatos.setText("Limpiar datos");
         btnLimpiarDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLimpiarDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarDatosActionPerformed(evt);
+            }
+        });
         jPanel2.add(btnLimpiarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 130, 30));
 
         btnGrabarCitaMedica.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnGrabarCitaMedica.setForeground(new java.awt.Color(18, 23, 33));
         btnGrabarCitaMedica.setText("Grabar cita médica");
         btnGrabarCitaMedica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGrabarCitaMedica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGrabarCitaMedicaActionPerformed(evt);
+            }
+        });
         jPanel2.add(btnGrabarCitaMedica, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 170, 30));
 
         txtMedico.setForeground(new java.awt.Color(18, 23, 33));
@@ -276,9 +379,9 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
         });
         jPanel2.add(txtHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 240, 30));
 
-        txtIdHistoriaClinica.setForeground(new java.awt.Color(18, 23, 33));
-        txtIdHistoriaClinica.setFocusable(false);
-        jPanel2.add(txtIdHistoriaClinica, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 240, 30));
+        txtEspecialidad.setForeground(new java.awt.Color(18, 23, 33));
+        txtEspecialidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Especialidad 1", "Especialidad 2", "Especialidad 3", "Especialidad 4" }));
+        jPanel2.add(txtEspecialidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 240, 30));
 
         bg.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 500, 550));
 
@@ -362,6 +465,35 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
     private void txtHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHoraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtHoraActionPerformed
+
+    private void btnGrabarCitaMedicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrabarCitaMedicaActionPerformed
+        // Obtener los valores de los campos en el formulario
+        int idHistoriaClinica = Integer.parseInt((String) txtHistoriaClinica.getSelectedItem());
+        int idEspecialidad = obtenerIdEspecialidad(txtEspecialidad.getSelectedItem().toString());
+        String fecha = (String) txtFecha.getSelectedItem();
+        String hora = (String) txtHora.getSelectedItem();
+        String motivo = txtMotivo.getText();
+
+        // Llamada al controlador para registrar la atención médica
+        int idCitaMedica = ControladorCitaMedica.guardarCitaMedica(idHistoriaClinica, idEspecialidad, fecha, hora, motivo);
+
+        if (idCitaMedica != -1) {
+            // Registro exitoso
+            JOptionPane.showMessageDialog(this, "Registro de atención médica exitoso.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            // Error en el registro
+            JOptionPane.showMessageDialog(this, "Error en el registro. Por favor, inténtelo de nuevo.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnGrabarCitaMedicaActionPerformed
+
+    private void btnLimpiarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarDatosActionPerformed
+        txtHistoriaClinica.setSelectedIndex(0);
+        txtEspecialidad.setSelectedIndex(0);
+        txtMedico.setSelectedIndex(0);
+        txtFecha.setSelectedIndex(0);
+        txtHora.setSelectedIndex(0);
+        txtMotivo.setText("");
+    }//GEN-LAST:event_btnLimpiarDatosActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -448,8 +580,8 @@ public class GenerarCitaMedicaVista extends javax.swing.JFrame {
     private javax.swing.JLabel logo;
     private javax.swing.JComboBox<String> txtEspecialidad;
     private javax.swing.JComboBox<String> txtFecha;
+    private javax.swing.JComboBox<String> txtHistoriaClinica;
     private javax.swing.JComboBox<String> txtHora;
-    private javax.swing.JTextField txtIdHistoriaClinica;
     private javax.swing.JComboBox<String> txtMedico;
     private javax.swing.JTextArea txtMotivo;
     // End of variables declaration//GEN-END:variables
