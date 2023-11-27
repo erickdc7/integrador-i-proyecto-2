@@ -14,6 +14,7 @@ public class BusquedaPacienteVista extends javax.swing.JFrame {
         this.setLocationRelativeTo(this);
         setIconImage(getIconImage());
 
+        // Establece la imagen en el JLabel 'logo' utilizando el método SetImageLabel
         SetImageLabel(logo, "src/img/logo.png");
 
         tblPaciente.requestFocusInWindow();

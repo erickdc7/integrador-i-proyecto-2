@@ -18,7 +18,10 @@ public class RegistroPacienteVista extends javax.swing.JFrame {
         this.setLocationRelativeTo(this);
         setIconImage(getIconImage());
 
+        // Establece la imagen en el JLabel 'logo' utilizando el método SetImageLabel
         SetImageLabel(logo, "src/img/logo.png");
+
+        // Inicializa el controlador de paciente
         controladorPaciente = new ControladorPaciente();
     }
 
@@ -431,7 +434,7 @@ public class RegistroPacienteVista extends javax.swing.JFrame {
         txtApellidos.setText("");
         txtDni.setText("");
         txtEdad.setText("");
-        txtGenero.setSelectedIndex(0); // Puedes establecer el índice inicial deseado
+        txtGenero.setSelectedIndex(0);
         txtCorreo.setText("");
         txtCelular.setText("");
         txtDireccion.setText("");

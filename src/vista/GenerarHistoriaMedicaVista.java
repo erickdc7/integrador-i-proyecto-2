@@ -19,6 +19,7 @@ public class GenerarHistoriaMedicaVista extends javax.swing.JFrame {
         this.setLocationRelativeTo(this);
         setIconImage(getIconImage());
 
+        // Establece la imagen en el JLabel 'logo' utilizando el método SetImageLabel
         SetImageLabel(logo, "src/img/logo.png");
 
         controladorHistoriaClinica = new ControladorHistoriaClinica();
