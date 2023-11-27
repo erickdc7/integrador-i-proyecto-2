@@ -10,9 +10,7 @@ public class Main {
         Connection connection = Conexion.getConnection();
 
         // Realiza operaciones en la base de datos si la conexión es exitosa
-        if (connection != null) {
-            // Aquí puedes realizar operaciones en la base de datos
-
+        if (connection != null) {  
             // Cierra la conexión después de usarla
             Conexion.closeConnection(connection);
         }

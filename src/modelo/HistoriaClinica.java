@@ -13,7 +13,7 @@ public class HistoriaClinica {
     private String historialAbuelosPat;
     private String historialAbuelosMat;
 
-    // Constructor vacío
+    // Constructor
     public HistoriaClinica() {
         this.idHistoriaClinica = 0; // O el valor predeterminado que desees
         this.paciente = null; // O el valor predeterminado que desees
